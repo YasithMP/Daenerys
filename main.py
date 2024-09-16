@@ -18,6 +18,8 @@ class Dany(commands.Bot):
         await self.load_extension(f"cogs.snipe")
         await self.load_extension(f"cogs.flip")
         await self.load_extension(f"cogs.av")
+        await self.load_extension(f"cogs.hide")
+        await self.load_extension(f"cogs.unhide")
         await client.tree.sync()
 
     async def on_ready(self):
