@@ -1,8 +1,8 @@
 import discord
 from discord.ext import commands
+import os
 
 from apikeys import BotToken
-
 
 
 class Dany(commands.Bot):
@@ -14,16 +14,13 @@ class Dany(commands.Bot):
             )
     
     async def setup_hook(self) -> None: 
-        await self.load_extension(f"cogs.ping")
-        await self.load_extension(f"cogs.snipe")
-        await self.load_extension(f"cogs.flip")
-        await self.load_extension(f"cogs.av")
-        await self.load_extension(f"cogs.channel")
-        await client.tree.sync()
+        for file in os.listdir('./cogs'):
+            if file.endswith('.py'):
+                await self.load_extension(f'cogs.{file[:-3]}')
+
 
     async def on_ready(self):
         print(f"{self.user} has connected to Discord")
-
 
 
 client = Dany()
