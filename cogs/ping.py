@@ -18,6 +18,11 @@ class ping(commands.Cog):
 
         await interaction.response.send_message(embed=embed)
 
+    @commands.command()
+    async def ping(self, ctx):
+        await ctx.send(f"API Latency: `{round(self.client.latency * 1000)}ms`")
+
+
 async def setup(client: commands.Bot) -> None:
     await client.add_cog(ping(client))
 
