@@ -2,9 +2,9 @@
 
 ## Setup Instructions
 
-1. Create a new file named **`apikeys.py`** in the project directory.
-2. Open `apikeys.py` and add the following line:
+1. Rename `default.env` to `.env`.
+2. Open `.env` and update the settings as needed (like your bot token, database URLs, etc.).
+3. Install the required Python packages using pip:
 
-   ```python
-   BotToken = 'your-bot-token-here'
-   
+   ```bash
+   pip install -r requirements.txt

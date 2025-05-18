@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 
-from apikeys import BotToken
+from dotenv import load_dotenv
 
 
 class Dany(commands.Bot):
@@ -23,5 +23,9 @@ class Dany(commands.Bot):
         print(f"{self.user} has connected to Discord")
 
 
+load_dotenv()
+DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+
+
 client = Dany()
-client.run(BotToken)
+client.run(DISCORD_TOKEN)
