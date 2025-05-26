@@ -3,7 +3,7 @@ from discord import app_commands
 from discord.ext import commands
 
 
-class snipe(commands.Cog):
+class Snipe(commands.Cog):
     def __init__(self, client: commands.Bot) -> None:
         self.client = client
 
@@ -34,4 +34,4 @@ class snipe(commands.Cog):
 
 
 async def setup(client: commands.Bot) -> None:
-    await client.add_cog(snipe(client))
+    await client.add_cog(Snipe(client))

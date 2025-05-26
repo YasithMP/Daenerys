@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 DEV_GUILD_ID = os.getenv('DEV_GUILD_ID')
 
-class ping(commands.Cog):
+class Ping(commands.Cog):
     def __init__(self, client: commands.Bot) -> None:
         self.client = client
 
@@ -29,6 +29,6 @@ class ping(commands.Cog):
 
 
 async def setup(client: commands.Bot) -> None:
-    await client.add_cog(ping(client))
+    await client.add_cog(Ping(client))
 
     

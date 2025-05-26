@@ -2,7 +2,7 @@ import discord
 from discord import app_commands
 from discord.ext import commands
 
-class av(commands.Cog):
+class Av(commands.Cog):
     def __init__(self, client: commands.Bot) -> None:
         self.client = client
         
@@ -17,5 +17,5 @@ class av(commands.Cog):
         await interaction.response.send_message(embed=embed)
 
 async def setup(client: commands.Bot) -> None:
-    await client.add_cog(av(client))
+    await client.add_cog(Av(client))
         
