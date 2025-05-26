@@ -14,7 +14,8 @@ class Dany(commands.Bot):
     def __init__(self):
         super().__init__(
             command_prefix='.',
-            intents=discord.Intents.all()
+            intents=discord.Intents.all(),
+            help_command=None
             )
     
     async def setup_hook(self) -> None: 
