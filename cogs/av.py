@@ -1,6 +1,7 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
+import datetime
 
 class Av(commands.Cog):
     def __init__(self, client: commands.Bot) -> None:
@@ -10,7 +11,7 @@ class Av(commands.Cog):
     @app_commands.command(name="av", description="Displays your avatar.")
     async def avatar(self, interaction: discord.Interaction):
 
-        embed = discord.Embed(title="Server Avatar", color=discord.Color.random())
+        embed = discord.Embed(title="Server Avatar", color=discord.Color.random(), timestamp=datetime.datetime.now())
         embed.set_image(url=interaction.user.display_avatar)
         embed.set_author(name=f"{interaction.user.display_name}", icon_url=interaction.user.display_avatar.url)
 

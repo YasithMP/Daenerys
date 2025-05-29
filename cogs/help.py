@@ -23,8 +23,8 @@ Daenerys Targaryen is a dragon-backed queen who talks justice, breaks chains, an
 `.reset @user` - reset permission of a user.
 
 ** :books: General Commands**
-`.flip` - flip a coin. (Heads, Tails or *maybe* Side).
-`.av` - get user avatar.
+</flip:1376204568895164516> - flip a coin. (Heads, Tails or *maybe* Side).
+</av:1373514580562804757> - get user avatar.
 
 ** :wrench: Moderation Commands** (REQUIRE: MANAGE PERMISSIONS)
 `.purge` - delete messages in bulk, mention the number of messages you want to delete.""")
